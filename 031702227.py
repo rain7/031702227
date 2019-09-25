@@ -195,7 +195,7 @@ if num==3:
     #print(res)
     p1=re.compile('<province>(.+?)</province>')
     province=p1.findall(res)[0]
-    if province=='北京市'or'天津市'or'上海市'or'重庆市':
+    if province=='北京市'or province=='天津市'or province=='上海市'or province=='重庆市':
         city=province
         province=delete_substr(province,'市')#从字符串中删除子串
     else:
