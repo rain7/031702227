@@ -46,7 +46,7 @@ str1=str0
 for i in range(0,len(list1)):
     if re.search(list1[i],str0)!=None:
         if i>3:   #对是否为直辖市的判断
-            if re.search('自治区'，str0)!=None:
+            if re.search('自治区',str0)!=None:
                 province=list1[i]
             else:
                 province = list1[i] + '省'
