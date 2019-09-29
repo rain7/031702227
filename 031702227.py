@@ -31,13 +31,10 @@ while 1:
     num=int(num)
 
     #tele匹配
-    p1=re.compile('\d+')
+    p1=re.compile('\d{11}')
     pp1=p1.findall(str0)
-    #print(pp1)
-    len0=len(pp1)
-    for i in range(0,len0):
-        if int(pp1[i])>10000000000:
-            tele=str(pp1[i])
+    tele=str(pp1[0])
+    print(tele)
     #print(tele)
     str0=delete_substr(str0,tele)#从字符串中删除子串
 
