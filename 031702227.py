@@ -20,7 +20,7 @@ while 1:
     flag = []  # 标志
     for i in range(0, 10):
         flag.append(0)
-    list = [province, city, xian, zhen, lu, hao, fang] = [''] * 7
+    list = [name,tele,province, city, xian, zhen, lu, hao, fang] = [''] * 9
     try:
         str0 = input()
         if str0 == 'END':
@@ -32,16 +32,21 @@ while 1:
     num=int(num)
 
     #tele匹配
-    p1=re.compile('\d{11}')
-    pp1=p1.findall(str0)
-    tele=str(pp1[0])
-    #print(tele)
+    p1 = re.compile('\d{11}')
+    try:
+        pp1 = p1.findall(str0)
+        tele = str(pp1[0])
+    except IndexError:
+        pass
     str0=delete_substr(str0,tele)#从字符串中删除子串
 
     #name匹配
     p2=re.compile('!(.+?),')
-    pp2=p2.findall(str0)[0]
-    name=pp2
+    try:
+        pp2=p2.findall(str0)[0]
+        name = pp2
+    except IndexError:
+        pass
     #print(name)
     p3=re.compile(',(.+?)\.')
     str0=p3.findall(str0)[0]#去除前缀
