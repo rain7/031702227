@@ -34,7 +34,6 @@ while 1:
     p1=re.compile('\d{11}')
     pp1=p1.findall(str0)
     tele=str(pp1[0])
-    print(tele)
     #print(tele)
     str0=delete_substr(str0,tele)#从字符串中删除子串
 
