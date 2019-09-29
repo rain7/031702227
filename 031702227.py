@@ -211,6 +211,7 @@ while 1:
         xian = p3.findall(res)[0]
         p3 = re.compile('<township>(.+?)</township>')
         zhen = p3.findall(res)[0]
+        lu = delete_substr(lu, zhen)  # 从字符串中删除子串
         for i in range(1,5):
             flag[i] = 1
 
