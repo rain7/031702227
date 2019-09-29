@@ -115,7 +115,7 @@ while 1:
     zhen=''
     len0 = 5
     len1 = len(arr)
-    if len1 < :
+    if len1 < 5:
         len0 = len1
     for i in range(0, len1):
         if re.search('镇|乡',arr[i])!=None:
