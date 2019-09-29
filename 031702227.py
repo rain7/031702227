@@ -92,11 +92,11 @@ while 1:
     arr=p.findall(str0)
     t=0
     xian=''
-    len0 = 10
+    len0 = 5
     len1 = len(arr)
-    if len1 < 10:
+    if len1 < 5:
         len0 = len1
-    for i in range(0, len1):
+    for i in range(0, len0):
         if re.search('市|县|区',arr[i])!=None:
             t=1
             flag[3] = 1
@@ -117,7 +117,7 @@ while 1:
     len1 = len(arr)
     if len1 < 5:
         len0 = len1
-    for i in range(0, len1):
+    for i in range(0, len0):
         if re.search('镇|乡',arr[i])!=None:
             t=1
             flag[4] = 1
